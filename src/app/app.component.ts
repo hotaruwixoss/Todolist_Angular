@@ -11,13 +11,14 @@ export class AppComponent {
   tareas = [
 
     {
-      'todo': 'COSAS'
+      'todo': 'leer'
     }
   ];
 
 
   model: any = {};
   addTodo(): void{
+
     this.tareas.push(this.model);
 
   }
