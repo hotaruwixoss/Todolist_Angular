@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'todolistapp';
+  title = 'To-do list';
+
+  tareas = [
+
+    {
+      'todo': 'COSAS'
+    }
+  ];
+
+
+  model: any = {};
+  addTodo(): void{
+    this.tareas.push(this.model);
+
+  }
+
+  deleteTodo(): void{
+
+  }
+
+  editTodo(): void{
+
+
+  }
 }
