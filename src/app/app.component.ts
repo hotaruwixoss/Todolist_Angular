@@ -20,7 +20,7 @@ export class AppComponent {
   addTodo(): void{
 
     this.tareas.push(this.model);
-
+    this.model = {};
   }
 
   deleteTodo(): void{
