@@ -1,0 +1,99 @@
+<div class = "container app">
+    <div class="row">
+        <div class="col-sm-6">
+           <h1 class="text-center">{{title}}</h1>
+        </div>
+    
+
+           </div>
+        
+           <div class="row"> 
+            <div class="col -sm-6">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <div class="class= col-sm-5">
+                                <input type="text" class="form-control" 
+                                name="todo"[(ngModel)]="model.todo" 
+                                placeholder="Enter a new task" 
+                                > 
+                                <button type="submit" class="btn btn-success"(click)="addTodo()" >
+                                    add
+                                </button>
+                            
+                                    <button type="submit" class="btn btn-success" (click) ="searchTodo()"> 
+                                        Search 
+                                    </button> 
+                                
+        
+                            </div>
+        
+                        </div>
+
+
+                        <div>
+                            <div class="form-group">
+                            <div class="col -sm-5 col-sm-offset-2">
+                              
+                            </div>
+                            
+                            </div>
+                        </div>
+                       
+                        
+                    </form>
+                
+                <div>
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let tarea of tareas; let i = index">
+                        <td>{{tarea.todo}}</td>
+                        <td>
+                            <a (click)="editTodo(i)" class ="btn btn-success">
+                                Edit
+                            </a>
+                            <a a (click)="deleteTodo(i)" class="btn btn-danger">
+                                Delete
+                             </a> 
+                        </td>
+                    </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+            <div class="col -sm-4">
+                <h2>Update List</h2>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="class= col-sm-10">
+                <input type="text" class="form-control" id="name"
+                name="todo"[(ngModel)]="model2.todo"
+                placeholder="Enter a new task"
+            >
+    
+                        </div>
+    
+                    </div>
+                    <div>
+                        <div class="form-group">
+                        <div class="col -sm-10 col-sm-offset-2">
+                            <button type="submit" class="btn btn-success"(click)="updateTodo()" >
+                                Update
+                            </button>
+                        </div>
+                        
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>   
+        </div>
